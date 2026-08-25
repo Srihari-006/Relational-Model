@@ -1,0 +1,6 @@
+{
+  "name": "Relational Model Interactive Lab",
+  "description": "An interactive study tool and live relational algebra sandbox for DBMS Chapter 2: Introduction to the Relational Model.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
