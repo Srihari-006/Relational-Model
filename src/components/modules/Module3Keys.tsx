@@ -142,21 +142,22 @@ export const Module3Keys: React.FC<Module3Props> = ({
 
   return (
     <div className="max-w-6xl mx-auto space-y-10 pb-16">
-      {/* Intro Header */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-3">
+      {/* Intro Header & Explanation */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-xs space-y-4">
         <div className="flex items-center gap-2">
           <span className="px-2.5 py-0.5 rounded-full bg-blue-100 text-[#1e3a5f] font-mono text-xs font-bold">
             Chapter 2 · Slide 8
           </span>
-          <span className="text-xs text-slate-500">5 Interactive Labs</span>
+          <span className="text-xs text-slate-500 font-medium">Uniqueness & Referential Constraints</span>
         </div>
-        <h2 className="text-2xl font-bold text-slate-900">
-          Relational Keys & Integrity Constraints
+        <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+          Module 3 — Keys
         </h2>
-        <p className="text-sm text-slate-600 leading-relaxed">
-          Keys uniquely identify tuples in a relation and establish referential integrity between tables.
-          Master the hierarchy from <strong>Superkeys</strong> (any identifying set) to <strong>Candidate Keys</strong> (minimal superkeys), <strong>Primary Keys</strong> (selected candidate key), and <strong>Foreign Keys</strong> (referential links).
-        </p>
+        <div className="p-4 bg-slate-50 border border-slate-200/80 rounded-xl text-slate-700 text-sm leading-relaxed space-y-2">
+          <p>
+            This covers how to uniquely identify rows. A <strong>superkey</strong> is any set of attributes that can uniquely identify a tuple (e.g., <code className="font-mono text-xs text-blue-900 font-semibold">{`{ID, name}`}</code> works, but so does just <code className="font-mono text-xs text-blue-900 font-semibold">{`{ID}`}</code>). A <strong>candidate key</strong> is a minimal superkey — you can&apos;t remove any attribute without losing uniqueness. Out of all candidate keys, one is chosen as the <strong>primary key</strong>. A <strong>foreign key</strong> is an attribute in one table that must match a value in another table&apos;s primary key, which is how tables reference each other (the &quot;referencing&quot; and &quot;referenced&quot; relations).
+          </p>
+        </div>
       </div>
 
       {/* COMPONENT 1: Interactive Superkey Tester */}

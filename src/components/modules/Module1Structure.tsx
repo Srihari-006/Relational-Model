@@ -139,21 +139,22 @@ export const Module1Structure: React.FC<Module1Props> = ({
 
   return (
     <div className="max-w-6xl mx-auto space-y-10 pb-16">
-      {/* Intro Header */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-3">
+      {/* Intro Header & Explanation */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-xs space-y-4">
         <div className="flex items-center gap-2">
           <span className="px-2.5 py-0.5 rounded-full bg-blue-100 text-[#1e3a5f] font-mono text-xs font-bold">
             Chapter 2 · Slides 3–6
           </span>
-          <span className="text-xs text-slate-500">5 Interactive Labs</span>
+          <span className="text-xs text-slate-500 font-medium">Foundations & Definitions</span>
         </div>
-        <h2 className="text-2xl font-bold text-slate-900">
-          Structure of Relational Databases
+        <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+          Module 1 — Structure of Relational Databases
         </h2>
-        <p className="text-sm text-slate-600 leading-relaxed">
-          The relational model represents data as a collection of relations (tables). Each relation consists of a
-          schema defining its attributes (columns) and an instance consisting of a set of unordered tuples (rows).
-        </p>
+        <div className="p-4 bg-slate-50 border border-slate-200/80 rounded-xl text-slate-700 text-sm leading-relaxed space-y-2">
+          <p>
+            This is the foundation. A relation is basically a table (like <code className="px-1.5 py-0.5 rounded bg-blue-50 text-blue-900 font-mono text-xs font-bold border border-blue-200">instructor</code>), where each attribute is a column (<code className="font-mono text-xs text-slate-800">ID</code>, <code className="font-mono text-xs text-slate-800">name</code>, <code className="font-mono text-xs text-slate-800">dept_name</code>, <code className="font-mono text-xs text-slate-800">salary</code>) and each tuple is a row of data. Every attribute has a domain — the set of allowed values it can hold (e.g., salary must be a number). Values are supposed to be atomic (indivisible — you can't split them further), and the special value <code className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 font-mono text-xs font-bold">null</code> represents &quot;unknown&quot; data. This module also teaches that relations are unordered — the rows can be stored in any order and it's still the same relation.
+          </p>
+        </div>
       </div>
 
       {/* COMPONENT 1: Interactive Labeled Diagram of Instructor Relation */}

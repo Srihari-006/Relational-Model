@@ -174,22 +174,22 @@ export const Module2SchemaInstance: React.FC<Module2Props> = ({
 
   return (
     <div className="max-w-6xl mx-auto space-y-10 pb-16">
-      {/* Intro Header */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-3">
+      {/* Intro Header & Explanation */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-xs space-y-4">
         <div className="flex items-center gap-2">
           <span className="px-2.5 py-0.5 rounded-full bg-blue-100 text-[#1e3a5f] font-mono text-xs font-bold">
             Chapter 2 · Slide 7
           </span>
-          <span className="text-xs text-slate-500">5 Interactive Labs</span>
+          <span className="text-xs text-slate-500 font-medium">Core Distinction</span>
         </div>
-        <h2 className="text-2xl font-bold text-slate-900">
-          Database Schema vs. Database Instance
+        <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+          Module 2 — Database Schema vs. Instance
         </h2>
-        <p className="text-sm text-slate-600 leading-relaxed">
-          One of the most fundamental distinctions in database theory: the <strong>Schema</strong> is the logical
-          design and structure (rarely changes), whereas the <strong>Instance</strong> is the snapshot of data
-          at a given instant in time (changes continuously as tuples are inserted, updated, or removed).
-        </p>
+        <div className="p-4 bg-slate-50 border border-slate-200/80 rounded-xl text-slate-700 text-sm leading-relaxed space-y-2">
+          <p>
+            This clears up a common confusion. The <strong>schema</strong> is the fixed logical structure — just the table name and its attribute list, like <code className="px-1.5 py-0.5 rounded bg-blue-50 text-blue-900 font-mono text-xs font-bold border border-blue-200">instructor(ID, name, dept_name, salary)</code>. The <strong>instance</strong> is the actual data sitting in the table at any given moment — a snapshot in time. The schema rarely changes, but the instance changes constantly as rows are added, updated, or deleted.
+          </p>
+        </div>
       </div>
 
       {/* COMPONENT 1: Side-by-Side Invariance Viewer */}

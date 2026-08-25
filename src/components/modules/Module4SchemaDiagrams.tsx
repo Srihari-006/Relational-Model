@@ -130,21 +130,22 @@ export const Module4SchemaDiagrams: React.FC<Module4Props> = ({
 
   return (
     <div className="max-w-6xl mx-auto space-y-10 pb-16">
-      {/* Intro Header */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-3">
+      {/* Intro Header & Explanation */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-xs space-y-4">
         <div className="flex items-center gap-2">
           <span className="px-2.5 py-0.5 rounded-full bg-blue-100 text-[#1e3a5f] font-mono text-xs font-bold">
             Chapter 2 · Slide 9
           </span>
-          <span className="text-xs text-slate-500">5 Interactive Labs</span>
+          <span className="text-xs text-slate-500 font-medium">Big-Picture Visual Schema</span>
         </div>
-        <h2 className="text-2xl font-bold text-slate-900">
-          Schema Diagrams for University Database
+        <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+          Module 4 — Schema Diagrams
         </h2>
-        <p className="text-sm text-slate-600 leading-relaxed">
-          A database schema diagram visually represents all relations, their attributes (with primary keys underlined),
-          and arrows denoting foreign key dependencies from referencing to referenced relations.
-        </p>
+        <div className="p-4 bg-slate-50 border border-slate-200/80 rounded-xl text-slate-700 text-sm leading-relaxed space-y-2">
+          <p>
+            This is the visual, big-picture module. It shows the full university database schema diagram, with all the tables (<code className="font-mono text-xs text-slate-800">student</code>, <code className="font-mono text-xs text-slate-800">instructor</code>, <code className="font-mono text-xs text-slate-800">department</code>, <code className="font-mono text-xs text-slate-800">course</code>, <code className="font-mono text-xs text-slate-800">section</code>, <code className="font-mono text-xs text-slate-800">teaches</code>, <code className="font-mono text-xs text-slate-800">takes</code>, <code className="font-mono text-xs text-slate-800">advisor</code>, <code className="font-mono text-xs text-slate-800">classroom</code>, <code className="font-mono text-xs text-slate-800">time_slot</code>, <code className="font-mono text-xs text-slate-800">prereq</code>) and arrows showing how they connect via foreign keys. It helps students see the whole system at once — how a student&apos;s enrollment (<code className="font-mono text-xs text-blue-900 font-semibold">takes</code>) connects to a <code className="font-mono text-xs text-blue-900 font-semibold">section</code>, which connects to a <code className="font-mono text-xs text-blue-900 font-semibold">course</code>, which connects to a <code className="font-mono text-xs text-blue-900 font-semibold">department</code>, and so on.
+          </p>
+        </div>
       </div>
 
       {/* COMPONENT 1 & 2: Interactive SVG University Schema Diagram */}

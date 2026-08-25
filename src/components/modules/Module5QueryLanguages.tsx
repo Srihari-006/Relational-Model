@@ -105,21 +105,22 @@ export const Module5QueryLanguages: React.FC<Module5Props> = ({
 
   return (
     <div className="max-w-6xl mx-auto space-y-10 pb-16">
-      {/* Intro Header */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-3">
+      {/* Intro Header & Explanation */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-xs space-y-4">
         <div className="flex items-center gap-2">
           <span className="px-2.5 py-0.5 rounded-full bg-blue-100 text-[#1e3a5f] font-mono text-xs font-bold">
             Chapter 2 · Slide 10
           </span>
-          <span className="text-xs text-slate-500">5 Interactive Labs</span>
+          <span className="text-xs text-slate-500 font-medium">Paradigms & Equivalences</span>
         </div>
-        <h2 className="text-2xl font-bold text-slate-900">
-          Relational Query Languages Overview
+        <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+          Module 5 — Relational Query Languages
         </h2>
-        <p className="text-sm text-slate-600 leading-relaxed">
-          A query language is the medium by which users request information from a database. Learn the distinction
-          between <strong>procedural</strong> languages (specifying <em>how</em> to compute) and <strong>non-procedural / declarative</strong> languages (specifying <em>what</em> information is desired).
-        </p>
+        <div className="p-4 bg-slate-50 border border-slate-200/80 rounded-xl text-slate-700 text-sm leading-relaxed space-y-2">
+          <p>
+            This is a short conceptual overview before diving into the real language. It distinguishes <strong>procedural languages</strong> (where you specify how to get the result, step by step — this is relational algebra) from <strong>declarative ones</strong> (where you specify what you want, not how — like relational calculus). It notes that algebra, tuple calculus, and domain calculus are all equally powerful, but the course focuses on algebra.
+          </p>
+        </div>
       </div>
 
       {/* COMPONENT 1: Procedural vs Declarative Concept Comparator */}

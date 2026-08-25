@@ -237,24 +237,56 @@ export const Module6RelationalAlgebra: React.FC<Module6Props> = ({
 
   return (
     <div className="max-w-6xl mx-auto space-y-8 pb-16">
-      {/* Intro Header */}
-      <div className="bg-gradient-to-r from-[#1e3a5f] to-[#0f243d] rounded-2xl p-6 text-white shadow-md space-y-3">
+      {/* Intro Header & Explanation */}
+      <div className="bg-gradient-to-r from-[#1e3a5f] to-[#0f243d] rounded-2xl p-6 sm:p-7 text-white shadow-md space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 font-mono text-xs font-bold border border-amber-400/30">
-              Module 6 · Complete Query Engine
+              Module 6 · The Relational Algebra
             </span>
-            <span className="text-xs text-blue-200">Chapter 2 · Slides 11–24</span>
+            <span className="text-xs text-blue-200 font-medium">Chapter 2 · Slides 11–24</span>
           </div>
         </div>
 
         <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-          The Relational Algebra Interactive Engine
+          Module 6 — The Relational Algebra
         </h2>
-        <p className="text-sm text-blue-100/90 leading-relaxed max-w-3xl">
-          Execute real relational algebra operations step-by-step against the University Database.
-          Inspect resulting relations, degrees, cardinalities, predicate expressions, and equivalences in real-time.
-        </p>
+
+        <div className="p-4 sm:p-5 bg-white/10 backdrop-blur-xs rounded-xl border border-white/15 text-blue-50 text-sm leading-relaxed space-y-3">
+          <p>
+            This is the core, hands-on module. It introduces the six basic operators that let you actually query data:
+          </p>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs sm:text-[13px] pt-1">
+            <li className="flex items-start gap-2 bg-black/20 p-2.5 rounded-lg border border-white/10">
+              <span className="font-mono font-bold text-amber-300 text-sm shrink-0">σ</span>
+              <span><strong>(select)</strong> — filter rows by a condition (e.g., <code className="font-mono bg-blue-900/60 px-1 py-0.5 rounded text-amber-200">dept_name=&quot;Physics&quot;</code>)</span>
+            </li>
+            <li className="flex items-start gap-2 bg-black/20 p-2.5 rounded-lg border border-white/10">
+              <span className="font-mono font-bold text-amber-300 text-sm shrink-0">∏</span>
+              <span><strong>(project)</strong> — pick specific columns, dropping the rest</span>
+            </li>
+            <li className="flex items-start gap-2 bg-black/20 p-2.5 rounded-lg border border-white/10">
+              <span className="font-mono font-bold text-amber-300 text-sm shrink-0">∪, ∩, −</span>
+              <span><strong>(union, intersect, difference)</strong> — combine or compare two compatible relations</span>
+            </li>
+            <li className="flex items-start gap-2 bg-black/20 p-2.5 rounded-lg border border-white/10">
+              <span className="font-mono font-bold text-amber-300 text-sm shrink-0">×</span>
+              <span><strong>(Cartesian product)</strong> — pair every row of one table with every row of another</span>
+            </li>
+            <li className="flex items-start gap-2 bg-black/20 p-2.5 rounded-lg border border-white/10">
+              <span className="font-mono font-bold text-amber-300 text-sm shrink-0">⋈</span>
+              <span><strong>(join)</strong> — a smarter version of Cartesian product that only keeps matching pairs (join = select applied after a Cartesian product)</span>
+            </li>
+            <li className="flex items-start gap-2 bg-black/20 p-2.5 rounded-lg border border-white/10">
+              <span className="font-mono font-bold text-amber-300 text-sm shrink-0">ρ</span>
+              <span><strong>(rename)</strong> — give a result a name so it can be reused</span>
+            </li>
+            <li className="flex items-start gap-2 bg-black/20 p-2.5 rounded-lg border border-white/10 md:col-span-2">
+              <span className="font-mono font-bold text-amber-300 text-sm shrink-0">γ</span>
+              <span><strong>(aggregate/group by)</strong> — compute things like avg, min, max, sum, count, optionally grouped by an attribute (e.g., average salary per department)</span>
+            </li>
+          </ul>
+        </div>
 
         {/* Sub-Tabs Nav */}
         <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/15">
